@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;/*tamanho de 100% da viewport(tela que estou utilizando) */
+    display: grid;
+    color: #fff;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main"
+    ;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 80px 1fr;
+    background-color: #121212;
+}
+
+.header{
+    grid-area: header;
+    background-color: #181818;
+    border-bottom: 1px solid #282828;
+    padding: 20px;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: #000;
+    padding: 20px;
+}
+
+.main{
+    grid-area: main;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+
+}
+
+.card{
+    background-color: #282828;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 4px;
+}
+
